@@ -1,0 +1,38 @@
+{
+    "name": "tc39-signals-jsx",
+    "description": "TC-39 Signals with a Fine-Grained Renderer",
+    "version": "0.1.0",
+    "author": "Mark Malstrom",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/markmals/tc39-signals-jsx"
+    },
+    "module": "dist/index.js",
+    "main": "lib/index.js",
+    "types": "types/index.d.ts",
+    "scripts": {
+        "build": "rollup -c && ncp ./src/jsx.d.ts ./types/jsx.d.ts && tsc && ncp ./src/client.d.ts ./types/client.d.ts",
+        "prepublishOnly": "npm run build"
+    },
+    "dependencies": {
+        "csstype": "^3.1.0"
+    },
+    "devDependencies": {
+        "@babel/core": "7.19.3",
+        "@babel/preset-typescript": "7.18.6",
+        "@rollup/plugin-babel": "5.3.1",
+        "@rollup/plugin-node-resolve": "14.1.0",
+        "dom-expressions": "0.34.12",
+        "hyper-dom-expressions": "0.34.12",
+        "lit-dom-expressions": "0.34.12",
+        "ncp": "2.0.0",
+        "np": "^7.7.0",
+        "rollup": "^2.41.4",
+        "signal-polyfill": "^0.1.2",
+        "typescript": "4.8.4"
+    },
+    "peerDependencies": {
+        "signal-polyfill": "^0.1.2"
+    }
+}
